@@ -1,417 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeric Malabanan - Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jerec B. Malabanan — IT Graduate Portfolio</title>
+<meta name="description" content="Portfolio of Jerec B. Malabanan, BS Information Technology graduate seeking OJT / entry-level opportunities." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="#">Jerec.dev</a>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#home" class="brand">JBM<span class="brand-dot">_</span></a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#home" class="nav-link" data-section="home">home</a>
+      <a href="#about" class="nav-link" data-section="about">about</a>
+      <a href="#skills" class="nav-link" data-section="skills">skills</a>
+      <a href="#education" class="nav-link" data-section="education">education</a>
+      <a href="#contact" class="nav-link" data-section="contact">contact</a>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-        <div class="container">
-            <div class="home-content">
-                <div class="home-text">
-                    <span class="greeting">Hello, I'm</span>
-                    <h1 class="name">Jerec Malabanan</h1>
-                    <p class="title">Web Developer &amp; Designer</p>
-                    <p class="bio">
-                        A passionate BSIT graduate from City College of Tagaytay.
-                        I create beautiful, functional, and user-friendly websites
-                        and applications. Dedicated to writing clean code and delivering
-                        exceptional digital experiences.
-                    </p>
-                    <div class="home-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="home-image">
-                    <div class="profile-image">
-                        <i class="fas fa-user-circle" style="font-size: 200px; color: #6366f1;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a recent <strong>BSIT graduate from City College of Tagaytay</strong> 
-                        with a strong passion for web development and design. Throughout my academic 
-                        journey, I've developed a solid foundation in both front-end and back-end 
-                        technologies.
-                    </p>
-                    <p>
-                        I specialize in creating responsive, user-centric websites that combine 
-                        aesthetic design with technical excellence. I'm constantly learning new 
-                        technologies and best practices to stay current in the ever-evolving world 
-                        of web development. My goal is to build digital solutions that make a 
-                        positive impact.
-                    </p>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="label">Name:</span>
-                            <span>Jerec Malabanan</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Email:</span>
-                            <span>jerecmalabanan@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Location:</span>
-                            <span>Tagaytay, Philippines</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Education:</span>
-                            <span>BSIT - CCT</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Freelance:</span>
-                            <span>Available</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">Graduated:</span>
-                            <span>2026</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number" data-target="8">0</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number" data-target="5">0</span>
-                        <span class="stat-label">Happy Clients</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number" data-target="150">0</span>
-                        <span class="stat-label">Cups of Coffee</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number" data-target="2">0</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="main">
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <!-- Frontend Skills -->
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95"></div>
-                    </div>
-                    <span>95%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90"></div>
-                    </div>
-                    <span>90%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85"></div>
-                    </div>
-                    <span>85%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-react"></i>
-                    <h3>React</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="75"></div>
-                    </div>
-                    <span>75%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-bootstrap"></i>
-                    <h3>Bootstrap</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="88"></div>
-                    </div>
-                    <span>88%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-tailwind"></i>
-                    <h3>Tailwind CSS</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="80"></div>
-                    </div>
-                    <span>80%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-php"></i>
-                    <h3>PHP</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="78"></div>
-                    </div>
-                    <span>78%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="70"></div>
-                    </div>
-                    <span>70%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>SQL</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="75"></div>
-                    </div>
-                    <span>75%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-figma"></i>
-                    <h3>Figma (UI/UX)</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="82"></div>
-                    </div>
-                    <span>82%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-pencil-ruler"></i>
-                    <h3>Web Design</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85"></div>
-                    </div>
-                    <span>85%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
-                    <h3>Git &amp; GitHub</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="80"></div>
-                    </div>
-                    <span>80%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Responsive Design</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="92"></div>
-                    </div>
-                    <span>92%</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Graphic Design</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="78"></div>
-                    </div>
-                    <span>78%</span>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <p class="boot-line" id="bootLine" aria-live="polite">&gt; initializing profile...</p>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Website</h3>
-                        <p>A fully responsive online store with product management, shopping cart, and secure checkout system.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A productivity tool with real-time task tracking, user authentication, and team collaboration features.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Firebase</span>
-                            <span>CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>School Management System</h3>
-                        <p>Capstone project for BSIT - A comprehensive system for managing student records, grades, and attendance.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>SQL</span>
-                            <span>HTML/CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-portfolio"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Personal Portfolio</h3>
-                        <p>My personal portfolio website showcasing my skills, projects, and experience as a web developer.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-small">Live Demo</a>
-                            <a href="#" class="btn btn-small">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <h1 class="hero-name reveal">
+        JEREC B.<br /><span class="hero-name-accent">MALABANAN</span>
+      </h1>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>jerecmalabanan@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+63 998 169 5240</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Tagaytay City, Philippines</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <div>
-                            <h4>Education</h4>
-                            <p>BSIT - City College of Tagaytay</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" placeholder="Subject" required />
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+      <p class="hero-role reveal">Bachelor of Science in Information Technology — Graduate</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Jerec Malabanan. All rights reserved.</p>
-            <div class="footer-social">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </footer>
+      <div class="status-row reveal">
+        <span class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          available for OJT / entry-level roles
+        </span>
+        <span class="location-pill">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Niyugan, Laurel, Batangas, PH
+        </span>
+      </div>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+      <p class="hero-objective reveal">
+        Motivated IT graduate looking for an on-the-job training or entry-level opportunity
+        to apply what I've learned, keep growing my technical skills, and contribute
+        positively to a team from day one.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">get in touch</a>
+        <a href="#skills" class="btn btn-ghost">view skills</a>
+      </div>
+    </div>
+
+    <div class="scroll-cue reveal" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="panel" id="about">
+    <div class="panel-inner">
+      <p class="section-tag reveal">&gt; about --profile</p>
+      <h2 class="section-title reveal">Core competencies</h2>
+      <p class="section-lede reveal">The habits I bring to a team before the technical skills even come into play.</p>
+
+      <div class="competency-grid">
+        <article class="competency-card reveal">
+          <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/><path d="M3 16.5l9 4.5 9-4.5"/></svg>
+          <h3>Willingness to learn</h3>
+          <p>Quick to pick up new tools and processes, and comfortable asking questions to get up to speed fast.</p>
+        </article>
+
+        <article class="competency-card reveal">
+          <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.9 4.9l2.8 2.8"/><path d="M16.3 16.3l2.8 2.8"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.9 19.1l2.8-2.8"/><path d="M16.3 7.7l2.8-2.8"/></svg>
+          <h3>Hardworking</h3>
+          <p>Reliable and consistent — whether troubleshooting a stubborn issue or seeing a task through to the end.</p>
+        </article>
+
+        <article class="competency-card reveal">
+          <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <h3>Functionality</h3>
+          <p>Focused on solutions that actually work — practical fixes over unnecessary complexity.</p>
+        </article>
+
+        <article class="competency-card reveal">
+          <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <h3>Time management</h3>
+          <p>Keeps tasks organized and on schedule, even when juggling more than one priority at once.</p>
+        </article>
+      </div>
+
+      <div class="profile-strip reveal">
+        <p class="profile-strip-title">&gt; profile.json</p>
+        <div class="profile-data">
+          <div class="profile-item"><span class="k">date_of_birth</span><span class="v">October 17, 2003</span></div>
+          <div class="profile-item"><span class="k">age</span><span class="v">22</span></div>
+          <div class="profile-item"><span class="k">civil_status</span><span class="v">Single</span></div>
+          <div class="profile-item"><span class="k">nationality</span><span class="v">Filipino</span></div>
+          <div class="profile-item"><span class="k">place_of_birth</span><span class="v">Niyugan, Laurel, Batangas</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="panel panel-alt" id="skills">
+    <div class="panel-inner">
+      <p class="section-tag reveal">&gt; skills --list</p>
+      <h2 class="section-title reveal">Technical skills</h2>
+      <p class="section-lede reveal">The tools and fundamentals I've built up through my IT degree.</p>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+            <h3>Office productivity</h3>
+          </div>
+          <ul>
+            <li>Microsoft Word</li>
+            <li>Microsoft Excel</li>
+            <li>Microsoft PowerPoint</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="1"/><path d="M2 19h20"/><path d="M9 19l1-4h4l1 4"/></svg>
+            <h3>Hardware &amp; OS</h3>
+          </div>
+          <ul>
+            <li>Basic computer troubleshooting (hardware &amp; software)</li>
+            <li>Windows operating system fundamentals</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 0114 0"/><path d="M8.5 12a3.5 3.5 0 017 0"/><circle cx="12" cy="12" r="1"/><path d="M12 19v2"/></svg>
+            <h3>Networking</h3>
+          </div>
+          <ul>
+            <li>Basic networking concepts</li>
+            <li>LAN setup</li>
+            <li>IP addressing</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 9l-4 3 4 3"/><path d="M16 9l4 3-4 3"/><path d="M13 6l-2 12"/></svg>
+            <h3>Web &amp; programming</h3>
+          </div>
+          <ul>
+            <li>HTML &amp; CSS basics</li>
+            <li>Programming fundamentals</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <div class="skill-head">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+            <h3>File management</h3>
+          </div>
+          <ul>
+            <li>Organizing and maintaining digital files &amp; folders</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="panel" id="education">
+    <div class="panel-inner">
+      <p class="section-tag reveal">&gt; education.log</p>
+      <h2 class="section-title reveal">Education</h2>
+
+      <div class="edu-card reveal">
+        <div class="edu-status">
+          <span class="status-dot" aria-hidden="true"></span> graduated
+        </div>
+        <h3>Bachelor of Science in Information Technology</h3>
+        <p class="edu-school">City College of Tagaytay</p>
+        <p class="edu-desc">
+          Built a foundation in computer troubleshooting, networking basics, web fundamentals,
+          and programming — with hands-on practice across hardware, software, and office
+          productivity tools.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="panel panel-alt" id="contact">
+    <div class="panel-inner">
+      <p class="section-tag reveal">&gt; contact --send</p>
+      <h2 class="section-title reveal">Let's connect</h2>
+      <p class="section-lede reveal">Open to OJT placements, internships, and entry-level IT roles.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <p class="contact-label">email</p>
+          <p class="contact-value">jerecmalabanan@gmail.com</p>
+          <button class="btn btn-small" id="copyEmailBtn" data-copy="jerecmalabanan@gmail.com" type="button">
+            copy
+          </button>
+        </div>
+
+        <div class="contact-card reveal">
+          <p class="contact-label">phone</p>
+          <p class="contact-value">+63 998 169 5240</p>
+          <a class="btn btn-small" href="tel:+639981695240">call</a>
+        </div>
+
+        <div class="contact-card reveal">
+          <p class="contact-label">location</p>
+          <p class="contact-value">Niyugan, Laurel, Batangas</p>
+          <span class="btn btn-small btn-static">Philippines</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary vcard-btn reveal" id="vcardBtn" type="button">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+        save contact (.vcf)
+      </button>
+      <p class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Jerec B. Malabanan · built with HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
