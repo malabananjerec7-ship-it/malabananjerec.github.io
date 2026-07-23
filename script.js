@@ -1,4 +1,6 @@
-
+/* ==========================================================================
+   Jerec B. Malabanan — Portfolio Script
+   ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -12,14 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("year").textContent = new Date().getFullYear();
 });
 
-
+/* --------------------------------------------------------------------------
+   1. Boot sequence — types out a short diagnostic log in the hero, then
+      settles on a permanent status line. Click/tap anywhere on it to skip.
+   -------------------------------------------------------------------------- */
 function initBootSequence(prefersReducedMotion) {
   const el = document.getElementById("bootLine");
   if (!el) return;
 
   const lines = [
     "> initializing profile...",
-    "> loading modules: [office] [hardware] [networking] [web] ...ok",
+    "> loading modules: [office] [design] [web] [client support] ...ok",
     "> running self-check...",
     "> status: READY"
   ];
@@ -32,8 +37,8 @@ function initBootSequence(prefersReducedMotion) {
   let lineIndex = 0;
   let charIndex = 0;
   let skipped = false;
-  const typeSpeed = 22; 
-  const linePause = 380; 
+  const typeSpeed = 22; // ms per character
+  const linePause = 380; // pause between lines
 
   el.style.cursor = "pointer";
   el.title = "Click to skip";
@@ -56,13 +61,16 @@ function initBootSequence(prefersReducedMotion) {
       charIndex = 0;
       window.setTimeout(typeNextChar, linePause);
     }
- 
+    // else: finished on the last line, stays as-is
   }
 
   typeNextChar();
 }
 
-
+/* --------------------------------------------------------------------------
+   2. Scroll reveal — fades/slides elements with the `.reveal` class into
+      view as they enter the viewport.
+   -------------------------------------------------------------------------- */
 function initScrollReveal(prefersReducedMotion) {
   const targets = document.querySelectorAll(".reveal");
   if (!targets.length) return;
@@ -87,7 +95,9 @@ function initScrollReveal(prefersReducedMotion) {
   targets.forEach((el) => observer.observe(el));
 }
 
-
+/* --------------------------------------------------------------------------
+   3. Mobile nav toggle
+   -------------------------------------------------------------------------- */
 function initNavToggle() {
   const toggle = document.getElementById("navToggle");
   const nav = document.getElementById("nav");
@@ -108,7 +118,9 @@ function initNavToggle() {
   });
 }
 
-
+/* --------------------------------------------------------------------------
+   4. Highlight the active nav link based on which section is in view
+   -------------------------------------------------------------------------- */
 function initActiveNavOnScroll() {
   const sections = document.querySelectorAll("main section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -117,7 +129,7 @@ function initActiveNavOnScroll() {
   const linkFor = (id) => document.querySelector(`.nav-link[data-section="${id}"]`);
 
   if (!("IntersectionObserver" in window)) {
-    
+    // Fallback: just mark "home" active
     const homeLink = linkFor("home");
     if (homeLink) homeLink.classList.add("active");
     return;
@@ -139,7 +151,9 @@ function initActiveNavOnScroll() {
   sections.forEach((section) => observer.observe(section));
 }
 
-
+/* --------------------------------------------------------------------------
+   5. Copy email to clipboard
+   -------------------------------------------------------------------------- */
 function initCopyEmail() {
   const btn = document.getElementById("copyEmailBtn");
   const feedback = document.getElementById("copyFeedback");
@@ -176,7 +190,10 @@ function initCopyEmail() {
   });
 }
 
-
+/* --------------------------------------------------------------------------
+   6. Generate and download a vCard (.vcf) so visitors can save the contact
+      directly to their phone/address book.
+   -------------------------------------------------------------------------- */
 function initVCardDownload() {
   const btn = document.getElementById("vcardBtn");
   if (!btn) return;
